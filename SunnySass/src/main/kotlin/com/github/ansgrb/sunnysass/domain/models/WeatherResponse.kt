@@ -3,8 +3,8 @@ package com.github.ansgrb.sunnysass.domain.models
 import com.fasterxml.jackson.annotation.JsonProperty
 
 data class WeatherResponse(
-	@JsonProperty
+	@JsonProperty("main")
 	val main: Main,
-	@JsonProperty
+	@JsonProperty("weather")
 	val weather: List<Weather>
 )
