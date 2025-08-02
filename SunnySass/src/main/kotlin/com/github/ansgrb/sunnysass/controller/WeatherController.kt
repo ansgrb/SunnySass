@@ -39,7 +39,7 @@ class WeatherController(
 		return try {
 			val response = weatherService.getWeatherAndTip(request.city)
 			ResponseEntity.ok(response)
-		} catch (e: IllegalStateException) {
+		} catch (_: IllegalStateException) {
 			ResponseEntity.badRequest().build()
 		}
 	}
